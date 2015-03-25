@@ -6,7 +6,7 @@
         id        = "com.phonegap.Pi2PL"
         version   = "1.0.0">
 
-    <name>Pi2PL</name>
+    <name>Pi2Pl</name>
 
     <description>
         a simple pitch to plunge convertor
@@ -72,10 +72,10 @@
     -->
 
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+    <icon src="splash.png" />
 
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="splash.png" />
+    <gap:splash src="icon.png" />
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
