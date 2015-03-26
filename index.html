@@ -45,7 +45,7 @@
 
         <div class="box">
             <h5><b>INSTRUCTIONS</b></h5>
-            <h6>Enter the following data and press go to get the plunge and its direction, the strike should be the one left to the dip direction, i.e. should follow dip direction is equal to strike + 90&deg; hence the strike may be an obtuse angle and the value of the pitch from that end of the strike</h6>
+            <h6>Enter the following data and press go to get the plunge and its direction, the strike should be the one left to the dip direction, i.e. should follow dip direction is equal to strike + 90&deg; hence the strike may greater than 180 angle and the value of the pitch from that end of the strike</h6>
             <div class="row">
                 <div class="four columns">
                     <label>Dip of the Plane:</label>
@@ -108,6 +108,7 @@
             var st = document.getElementById('strike').value;
             var pp = torad(document.getElementById('lpitch').value);
             var pl = todeg(Math.asin(Math.sin(da) * Math.sin(pp)));
+            if (st>180)pp=2*Math.PI - pp;
             var pd = +st + todeg(Math.atan(Math.cos(da) * Math.tan(pp)))
             document.getElementById("plungeamt").value = pl;
             document.getElementById("plungedir").value = pd;
