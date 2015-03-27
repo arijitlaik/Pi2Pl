@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.Pi2Pl"
-        version   = "1.9.7">
+        version   = "1.9.9">
 
     <name>Pi2Pl</name>
 

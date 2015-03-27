@@ -58,7 +58,7 @@
                 </div>
                 <div class="three columns">
                     <label>Dip of the Plane:</label>
-                    <input type="number" min=0 max=360 id="dipamt">
+                    <input type="number" min=0 max=90 id="dipamt">
                     <deg>&deg;</deg>
                 </div>
                 <div class="three columns">
@@ -117,7 +117,7 @@
 
         function doPi2PL() {
             var da = torad(document.getElementById('dipamt').value);
-            var st = +document.getElementById('strike').value;
+            var st = +document.getElementById('strike').value % 360;
             var pp = torad(document.getElementById('lpitch').value);
             var pl = todeg(Math.asin(Math.sin(da) * Math.sin(pp)));
             var of = 0;
@@ -158,17 +158,17 @@
             }
             document.getElementById("datain").innerHTML =
                 'Entered Data <p>Plane: <b>' +
-                document.getElementById('strike').value +
+                st+
                 '/' +
                 document.getElementById('dipamt').value +
                 '&rarr;' +
                 dd +
-                '</br>Pitch of the line: ' +
+                '</b></br>Pitch of the line: <b>' +
                 document.getElementById('lpitch').value +
                 '&deg' +
                 ' from ' +
                 ps +
-                '</p>';
+                '</b></p>';
         }
 
         function roundoff() {
@@ -181,7 +181,7 @@
             var elements = document.getElementsByTagName("input");
             for (var ii = 0; ii < elements.length; ii++)
                 elements[ii].value = " ";
-            document.getElementById("datain").innerHTML ='Enter new values to re-calulate';
+            document.getElementById("datain").innerHTML = 'Enter new values to re-calulate';
 
         }
     </script>
