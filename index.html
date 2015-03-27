@@ -44,9 +44,13 @@
         </div>
 
         <div class="box">
-            <h5><b>INSTRUCTIONS</b></h5>
-            <h6 class="inst">Enter the following data and press <b>GO</b> to get the plunge and its direction,  the <b>strike</b> in the direction that has the <b>dip line</b> on to its <b>right</b> ,should follow Right Hand Rule i.e. <b>dip direction = <b>strike + 90&deg </b> &#40;the <b>strike</b> may be > <b>180</b> &#41; </h6>
+            <div class="inst">
+                <h5><b>INSTRUCTIONS</b> </br>
+                Enter the following data and press <b>GO</b> to get the plunge and its direction,  the <b>strike</b> in the direction that has the <b>dip direction</b> on to its <b>right</b> following the Right Hand Rule<b>(RHR)</b></br> i.e. <b>dip direction = strike + 90&deg </b> &#40;the <b>strike</b> may be > <b>180</b> &#41; </h5>
+            </div>
+
             <div class="row">
+
                 <div class="three columns">
                     <label>Strike of the plane:</label>
                     <input type="number" min=0 max=360 id="strike">
@@ -56,7 +60,6 @@
                     <label>Dip of the Plane:</label>
                     <input type="number" min=0 max=360 id="dipamt">
                     <deg>&deg;</deg>
-
                 </div>
                 <div class="three columns">
                     <label>Pitch of the line on the Plane:</label>
@@ -64,19 +67,21 @@
                     <deg>&deg;</deg>
                 </div>
                 <div class="three columns">
-                    <label>is the pitch measured from oppsite strike + 180 &deg</label>
+                    <label>is the pitch measured from strike + 180&deg end</label>
                     <input type="checkbox" name="pitchsense" id="psS">YES
                 </div>
             </div>
             <button onclick="doPi2PL()" class="button-primary">GO</button>
-            <p id="datain"></p>
             <div class="row">
                 <div class="six columns">
+                    <p id="datain">Input will show up here</p>
+                </div>
+                <div class="three columns">
                     <label>Plunge amount:</label>
                     <input type="text" id="plungeamt">
                     <deg>&deg;</deg>
                 </div>
-                <div class="six columns">
+                <div class="three columns">
                     <label>Plunge direction: </label>
                     <input type="text" id="plungedir">
                     <deg>&deg;</deg>
@@ -120,7 +125,7 @@
             if ((document.getElementById('psS').checked)) {
                 of = 180;
                 pp = 2 * Math.PI - pp;
-                ps = (ps + of)%360;
+                ps = (ps + of) % 360;
             };
             var pd = +of + st + todeg(Math.atan(Math.cos(da) * Math.tan(pp)));
 
