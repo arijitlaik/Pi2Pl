@@ -571,20 +571,17 @@ there.
 /* Larger than Desktop HD */
 
 @media (min-width: 1200px) {}
-
 /* Customizations
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
 
 deg {
     font-size: 2em;
     font-weight: bolder;
 }
 
-h,input {
+h,
+input {
     color: #1EAEDB;
-
     font-weight: 900;
 }
 
@@ -592,10 +589,10 @@ footer {
     text-align: center;
     font-size:
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
-
 
 .box {
     padding: .5em;
@@ -608,7 +605,21 @@ svg {
     border: 1px solid #bbb;
     padding: 3rem;
 }
-.button{
-background-color: white;}
-h6{
-text-align: justify}
+
+.button {
+    background-color: white;
+}
+
+.inst {
+    text-align: justify;
+    color: white;
+    background: #222;
+    font-weight: 600;
+    padding: 1%;
+}
+
+.inst b {
+    color: #33C3F0;
+    font-weight: 400;
+
+}
