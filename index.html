@@ -49,24 +49,25 @@
         <div class="box">
             <div class="inst">
                 <h5><b>INSTRUCTIONS</b> </br>
-                Enter the following data and press <b>GO</b> to get the plunge and its direction,  the <b>strike</b> in the direction that has the <b>dip direction</b> on to its <b>right</b> following the Right Hand Rule<b>(RHR)</b></br> i.e. <b>dip direction = strike + 90&deg </b> &#40;the <b>strike</b> may be > <b>180</b> &#41; </h5>
-            </div>
+                Enter the following data and press <b>GO</b> to get the plunge and its direction, mention the <b>strike</b> in the direction that has the <b>dip direction</b> on to its <b>right</b> following the Right Hand Rule<b>(RHR)</b></br> i.e. <b>dip direction = strike + 90&deg </b> &#40;the <b>strike</b> may be > <b>180</b> &#41; </h5>
 
+            </div>
+<div id="invalid"></div>
             <div class="row">
 
                 <div class="three columns">
                     <label>Strike of the plane:</label>
-                    <input type="number" min=0 max=360 id="strike">
+                    <input type="number" min=0 max=360 id="strike"  placeholder=0>
                     <deg>&deg;</deg>
                 </div>
                 <div class="three columns">
                     <label>Dip of the Plane:</label>
-                    <input type="number" min=0 max=90 id="dipamt">
+                    <input type="number" min=0 max=90 id="dipamt" placeholder=0>
                     <deg>&deg;</deg>
                 </div>
                 <div class="three columns">
                     <label>Pitch of the line on the Plane:</label>
-                    <input type="number" min=0 max=90 id="lpitch">
+                    <input type="number" min=0 max=90 id="lpitch" placeholder=0>
                     <deg>&deg;</deg>
                 </div>
                 <div class="three columns">

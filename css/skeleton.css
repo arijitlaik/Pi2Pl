@@ -622,9 +622,17 @@ svg {
 .inst b {
     color: #33C3F0;
     font-weight: 400;
-
-}
-#datain b{
- color: #33C3F0;
 }
 
+#datain b {
+    color: #33C3F0;
+}
+
+#invalid p {
+    background: #ff4141;
+    color: white;
+    margin: 0;
+    text-align: left;
+    padding-left: 1%;
+    text-transform: uppercase;
+}
