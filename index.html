@@ -26,7 +26,10 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-
+    <!-- javascripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/pi2pljquery.js"></script>
 </head>
 
 <body>
@@ -71,7 +74,7 @@
                     <input type="checkbox" name="pitchsense" id="psS">YES
                 </div>
             </div>
-            <button onclick="doPi2PL()" class="button-primary">GO</button>
+            <button id="doPi2PL" class="button-primary">GO</button>
             <div class="row">
                 <div class="six columns">
                     <p id="datain">Input will show up here</p>
@@ -87,9 +90,9 @@
                     <deg>&deg;</deg>
                 </div>
             </div>
-            <button onclick="roundoff()" class="button-primary">round off values</button>
+            <button id="roundoff" class="button-primary">round off values</button>
         </div>
-        <button onclick="cleanup()" class="button">clear</button>
+        <button id="cleanup" class="button">clear</button>
     </div>
     <hr/>
     <footer>
@@ -105,87 +108,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Converts from degrees to radians.
-        torad = function (degrees) {
-            return degrees * Math.PI / 180;
-        };
-        // Converts from radians to degrees.
-        todeg = function (radians) {
-            return radians * 180 / Math.PI;
-        };
-
-        function doPi2PL() {
-            var da = torad(document.getElementById('dipamt').value);
-            var st = +document.getElementById('strike').value % 360;
-            var pp = torad(document.getElementById('lpitch').value);
-            var pl = todeg(Math.asin(Math.sin(da) * Math.sin(pp)));
-            var of = 0;
-            var ps = st;
-            if ((document.getElementById('psS').checked)) {
-                of = 180;
-                pp = 2 * Math.PI - pp;
-                ps = (ps + of) % 360;
-            };
-            var pd = +of + st + todeg(Math.atan(Math.cos(da) * Math.tan(pp)));
-
-            document.getElementById("plungeamt").value = pl;
-            document.getElementById("plungedir").value = pd;
-            var dd = st + 90;
-            if (dd < 22.5 || dd > 337.5) {
-                dd = "N";
-            }
-            if (dd >= 22.5 && dd <= 67.5) {
-                dd = "NE";
-            }
-            if (dd > 67.5 && dd < 112.5) {
-                dd = "E";
-            }
-            if (dd >= 112.5 && dd <= 157.5) {
-                dd = "SE";
-            }
-            if (dd > 157.5 && dd < 202.5) {
-                dd = "S";
-            }
-            if (dd >= 202.5 && dd <= 247.5) {
-                dd = "SW";
-            }
-            if (dd > 247.5 && dd < 295.5) {
-                dd = "W";
-            }
-            if (dd >= 295.5 && dd <= 337.5) {
-                dd = "NW";
-            }
-            document.getElementById("datain").innerHTML =
-                'Entered Data <p>Plane: <b>' +
-                st+
-                '/' +
-                document.getElementById('dipamt').value +
-                '&rarr;' +
-                dd +
-                '</b></br>Pitch of the line: <b>' +
-                document.getElementById('lpitch').value +
-                '&deg' +
-                ' from ' +
-                ps +
-                '</b></p>';
-        }
-
-        function roundoff() {
-            document.getElementById("plungeamt").value = Math.round(+document.getElementById("plungeamt").value);
-            document.getElementById("plungedir").value = Math.round(+document.getElementById("plungedir").value);
-
-        }
-
-        function cleanup() {
-            var elements = document.getElementsByTagName("input");
-            for (var ii = 0; ii < elements.length; ii++)
-                elements[ii].value = " ";
-            document.getElementById("datain").innerHTML = 'Enter new values to re-calulate';
-
-        }
-    </script>
-    <!-- End Document pd = 180 + todeg(Math.atan(Math.cos(da) * Math.tan(pp)));;
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
