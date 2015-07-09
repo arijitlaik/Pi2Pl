@@ -22,7 +22,7 @@
             validity = 0;
         }
         return validity;
-    }
+    };
 
     $(document).ready(function () {
 
@@ -39,11 +39,11 @@
                 var pl = todeg(Math.asin(Math.sin(da) * Math.sin(pp)));
                 var of = 0;
                 var ps = st;
-                if ($('#psS').prop('checked')) {
+                if ($('#psS').prop('checked') && $('#lpitch').val()!=90) {
                     of = 180;
                     pp = 2 * Math.PI - pp;
                     ps = (ps + of) % 360;
-                };
+                }
                 var pd = +of + st + todeg(Math.atan(Math.cos(da) * Math.tan(pp)));
 
                 $("#plungeamt").val(pl);
@@ -79,11 +79,11 @@
                     'Entered Data <p>Plane: <b>' +
                     st +
                     '/' +
-                    +$('#dipamt').val() +
+                    $('#dipamt').val() +
                     '&rarr;' +
                     dd +
                     '</b></br>Pitch of the line: <b>' +
-                    +$('#lpitch').val() +
+                    $('#lpitch').val() +
                     '&deg' +
                     ' from ' +
                     ps +
