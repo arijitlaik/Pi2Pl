@@ -44,7 +44,7 @@
                     pp = 2 * Math.PI - pp;
                     ps = (ps + of) % 360;
                 };
-                var pd = +of + st + todeg(Math.atan(Math.cos(da) * Math.tan(pp)));
+                var pd = (+of + st + todeg(Math.atan(Math.cos(da) * Math.tan(pp))))%360;
 
                 $("#plungeamt").val(pl);
                 $("#plungedir").val(pd);
