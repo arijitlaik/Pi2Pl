@@ -1,4 +1,56 @@
 /*
+WiTeX
+https://github.com/AndrewBelt/WiTeX
+*/
+
+
+/* Latin Modern (LaTeX default) font */
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: normal;
+	font-style: normal;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: bold;
+	font-style: normal;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: normal;
+	font-style: italic;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: bold;
+	font-style: italic;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bolditalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Mono';
+	font-weight: normal;
+	font-style: normal;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Mono';
+	font-weight: normal;
+	font-style: italic;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-italic.woff') format('woff');
+}
+
+
+
+/*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
 * www.getskeleton.com
@@ -184,8 +236,8 @@ body {
     /* currently ems cause chrome bug misinterpreting rems on body element */
 
     line-height: 1.6;
-    font-weight: 400;
-    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+	font-family: 'Latin Modern Roman', serif;
     color: #222;
 }
 /* Typography
@@ -199,7 +251,7 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 h1 {
@@ -582,7 +634,7 @@ deg {
 h,
 input {
     color: #1EAEDB;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 footer {
@@ -621,7 +673,7 @@ svg {
 
 .inst b {
     color: #33C3F0;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 #datain b {
@@ -636,3 +688,5 @@ svg {
     padding-left: 1%;
     text-transform: uppercase;
 }
+
+
