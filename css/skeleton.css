@@ -1,53 +1,4 @@
-/*
-WiTeX
-https://github.com/AndrewBelt/WiTeX
-*/
-
-
-/* Latin Modern (LaTeX default) font */
-
-@font-face {
-	font-family: 'Latin Modern Roman';
-	font-weight: normal;
-	font-style: normal;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Latin Modern Roman';
-	font-weight: bold;
-	font-style: normal;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Latin Modern Roman';
-	font-weight: normal;
-	font-style: italic;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-italic.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Latin Modern Roman';
-	font-weight: bold;
-	font-style: italic;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bolditalic.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Latin Modern Mono';
-	font-weight: normal;
-	font-style: normal;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Latin Modern Mono';
-	font-weight: normal;
-	font-style: italic;
-	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-italic.woff') format('woff');
-}
-
+@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700,900);
 
 
 /*
@@ -237,7 +188,7 @@ body {
 
     line-height: 1.6;
     font-weight: normal;
-	font-family: 'Latin Modern Roman', serif;
+    font-family: 'Alegreya', serif;
     color: #222;
 }
 /* Typography
@@ -251,7 +202,7 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 h1 {
@@ -665,15 +616,15 @@ svg {
     text-align: justify;
     color: white;
     background: #222;
-    font-weight: 600;
     padding: 1%;
     margin-bottom: 1.2em;
     box-shadow: 0px 4px 10px #222;
+     font-weight: 700;
 }
 
 .inst b {
     color: #33C3F0;
-    font-weight: normal;
+    font-weight: 900;
 }
 
 #datain b {
